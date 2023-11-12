@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="mt-24 ml-8 w-1/3">
+    <div className="mt-24 px-10 max-w-5xl">
       <h1 className="font-poppins md:text-3xl font-bold">Hello There!</h1>
       <p className="mt-2 md:text-lg">
         In all honesty this site is more for me to document areas of Computer
