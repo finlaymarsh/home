@@ -1,13 +1,21 @@
-import Home from "./components/home/Home";
-import SideBar from "./components/sidebar/SideBar";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import DesignPatterns from "./pages/DesignPatterns/DesignPatterns";
+import Root from "./pages/Root/Root";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/design-patterns", element: <DesignPatterns /> },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <main className="h-screen flex gap-8">
-      <SideBar />
-      <Home />
-    </main>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
